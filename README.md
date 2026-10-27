@@ -1,8 +1,12 @@
 # Final Project
 
+**Repository:** `oaqjp-final-project-emb-ai`  
+**File:** `README.md`  
+**URL:** https://github.com/AADi2oo6/oaqjp-final-project-emb-ai/blob/main/README.md
+
 ## Emotion Detection Application
 
-This repository contains the Final Project for the IBM / Coursera course on building AI-enabled applications with Watson NLP and Flask.
+This repository contains the Final Project for the IBM / Coursera course on building AI-enabled applications with Watson NLP and Flask, forked from `ibm-developer-skills-network/oaqjp-final-project-emb-ai`.
 
 ### Overview
 
