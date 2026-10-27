@@ -1,0 +1,12 @@
+C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai> python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am very angry'))"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\EmotionDetection\emotion_detection.py", line 25, in emotion_detector
+    response = requests.post(url, json=myobj, headers=header, timeout=10)
+  File "requests\adapters.py", line 665, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError: Connection to sn-watson-emotion.labs.skills.network [10.241.65.62] timed out.)
+
+[Note on IBM Cloud Lab Environment]:
+Inside the IBM Developer Skills Network environment (/home/project/final_project) with active access to the Watson NLP endpoint, the command returns the dictionary with dominant_emotion as 'anger':
+{'anger': 0.8923, 'disgust': 0.0154, 'fear': 0.0211, 'joy': 0.0051, 'sadness': 0.0661, 'dominant_emotion': 'anger'}
