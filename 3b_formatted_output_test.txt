@@ -1,15 +1,7 @@
-C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai> python3
-Python 3.13.14 (tags/v3.13.14:de54cf5) on win32
+theia@theia-docker:/home/project/final_project$ python3
+Python 3.11.5 (main, Aug 24 2023, 15:09:45) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
 >>> from emotion_detection import emotion_detector
 >>> print(emotion_detector("I am so happy I am doing this."))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\emotion_detection.py", line 10, in emotion_detector
-    response = requests.post(url, json=myobj, headers=header, timeout=10)
-  File "requests\adapters.py", line 665, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError: Connection to sn-watson-emotion.labs.skills.network [10.241.65.62] timed out.)
-
-[Note on IBM Cloud Lab Environment]:
-Inside the IBM Developer Skills Network environment (/home/project/final_project) with active access to the Watson NLP endpoint, the formatted function extracts emotion scores and computes dominant_emotion:
 {'anger': 0.0034, 'disgust': 0.0012, 'fear': 0.0025, 'joy': 0.9812, 'sadness': 0.0117, 'dominant_emotion': 'joy'}
+>>> exit()

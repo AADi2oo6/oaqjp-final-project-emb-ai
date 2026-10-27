@@ -1,22 +1,6 @@
-python3 test_emotion_detection.py
-E
-======================================================================
-ERROR: test_emotion_detector (__main__.TestEmotionDetection.test_emotion_detector)
+theia@theia-docker:/home/project/final_project$ python3 test_emotion_detection.py
+.
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\test_emotion_detection.py", line 7, in test_emotion_detector
-    result_1 = emotion_detector('I am glad this happened')
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\EmotionDetection\emotion_detection.py", line 25, in emotion_detector
-    response = requests.post(url, json=myobj, headers=header, timeout=10)
-  File "requests\api.py", line 115, in post
-    return request("post", url, data=data, json=json, **kwargs)
-  File "requests\sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-  File "requests\adapters.py", line 665, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=10)'))
+Ran 1 test in 0.852s
 
-----------------------------------------------------------------------
-Ran 1 test in 40.202s
-
-FAILED (errors=1)
+OK

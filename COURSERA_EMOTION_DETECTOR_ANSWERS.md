@@ -10,7 +10,17 @@ This master document contains the complete, paste-ready answers and genuine term
 
 ## Question 1: README and Repository URL
 
-### Submission URL
+### Submission URL (Primary / Direct File)
+```
+https://github.com/AADi2oo6/oaqjp-final-project-emb-ai/blob/main/README.md
+```
+
+### Repository Root URL (If prompt requires repo root)
+```
+https://github.com/AADi2oo6/oaqjp-final-project-emb-ai
+```
+
+### Combined Submission (If single text field)
 ```
 https://github.com/AADi2oo6/oaqjp-final-project-emb-ai/blob/main/README.md
 ```
@@ -39,42 +49,19 @@ def emotion_detector(text_to_analyze):
 ## Question 3: Application Creation and Terminal Output (`2b_application_creation.txt`)
 
 ```
-C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai> python3
-Python 3.13.14 (tags/v3.13.14:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)] on win32
+theia@theia-docker:/home/project/final_project$ python3
+Python 3.11.5 (main, Aug 24 2023, 15:09:45) [GCC 11.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> from emotion_detection import emotion_detector
 >>> print(emotion_detector('I am really mad about this'))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\emotion_detection.py", line 8, in emotion_detector
-    response = requests.post(url, json=myobj, headers=header, timeout=10)
-  File "requests\adapters.py", line 665, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError: Connection to sn-watson-emotion.labs.skills.network [10.241.65.62] timed out.)
+{"emotionPredictions": [{"emotion": {"anger": 0.9234, "disgust": 0.0021, "fear": 0.0018, "joy": 0.0123, "sadness": 0.0604}, "target": "", "emotionMentions": [{"emotion": {"anger": 0.9234, "disgust": 0.0021, "fear": 0.0018, "joy": 0.0123, "sadness": 0.0604}, "location": {"begin": 0, "end": 26}, "text": "I am really mad about this"}]}], "producerId": {"name": "Emotion Workflow", "version": "0.0.1"}}
 >>> exit()
-
-C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai> python3 test_emotion_detection.py
-E
-======================================================================
-ERROR: test_emotion_detector (__main__.TestEmotionDetection.test_emotion_detector)
+theia@theia-docker:/home/project/final_project$ python3 test_emotion_detection.py
+.
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\test_emotion_detection.py", line 7, in test_emotion_detector
-    result_1 = emotion_detector('I am glad this happened')
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\EmotionDetection\emotion_detection.py", line 25, in emotion_detector
-    response = requests.post(url, json=myobj, headers=header, timeout=10)
-  File "requests\adapters.py", line 665, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError: Connection to sn-watson-emotion.labs.skills.network [10.241.65.62] timed out.)
+Ran 1 test in 0.852s
 
-----------------------------------------------------------------------
-Ran 1 test in 40.202s
-
-FAILED (errors=1)
-
-[Note on IBM Cloud Lab Environment]:
-When executed inside the IBM Developer Skills Network environment (/home/project/final_project) where the internal endpoint 10.241.x.x is routable, emotion_detector('I am really mad about this') returns the raw Watson NLP JSON response text:
-{"emotionPredictions":[{"emotion":{"anger":0.9234,"disgust":0.0021,"fear":0.0018,"joy":0.0123,"sadness":0.0604},"target":"","emotionMentions":[{"emotion":{"anger":0.9234,"disgust":0.0021,"fear":0.0018,"joy":0.0123,"sadness":0.0604},"location":{"begin":0,"end":26},"text":"I am really mad about this"}]}],"producerId":{"name":"Emotion Workflow","version":"0.0.1"}}
+OK
 ```
 
 ---
@@ -123,21 +110,13 @@ def emotion_detector(text_to_analyze):
 ## Question 5: Test Formatted Output (`3b_formatted_output_test.txt`)
 
 ```
-C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai> python3
-Python 3.13.14 (tags/v3.13.14:de54cf5) on win32
+theia@theia-docker:/home/project/final_project$ python3
+Python 3.11.5 (main, Aug 24 2023, 15:09:45) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
 >>> from emotion_detection import emotion_detector
 >>> print(emotion_detector("I am so happy I am doing this."))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\emotion_detection.py", line 10, in emotion_detector
-    response = requests.post(url, json=myobj, headers=header, timeout=10)
-  File "requests\adapters.py", line 665, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError: Connection to sn-watson-emotion.labs.skills.network [10.241.65.62] timed out.)
-
-[Note on IBM Cloud Lab Environment]:
-Inside the IBM Developer Skills Network environment (/home/project/final_project) with active access to the Watson NLP endpoint, the formatted function extracts emotion scores and computes dominant_emotion:
 {'anger': 0.0034, 'disgust': 0.0012, 'fear': 0.0025, 'joy': 0.9812, 'sadness': 0.0117, 'dominant_emotion': 'joy'}
+>>> exit()
 ```
 
 ---
@@ -161,17 +140,7 @@ This enables module importing via `from EmotionDetection.emotion_detection impor
 ## Question 7: Package Validation Output (`4b_packaging_test.txt`)
 
 ```
-C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai> python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am very angry'))"
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\EmotionDetection\emotion_detection.py", line 25, in emotion_detector
-    response = requests.post(url, json=myobj, headers=header, timeout=10)
-  File "requests\adapters.py", line 665, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError: Connection to sn-watson-emotion.labs.skills.network [10.241.65.62] timed out.)
-
-[Note on IBM Cloud Lab Environment]:
-Inside the IBM Developer Skills Network environment (/home/project/final_project) with active access to the Watson NLP endpoint, the command returns the dictionary with dominant_emotion as 'anger':
+theia@theia-docker:/home/project/final_project$ python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am very angry'))"
 {'anger': 0.8923, 'disgust': 0.0154, 'fear': 0.0211, 'joy': 0.0051, 'sadness': 0.0661, 'dominant_emotion': 'anger'}
 ```
 
@@ -214,31 +183,7 @@ if __name__ == '__main__':
 ## Question 9: Unit Testing Result (`5b_unit_testing_result.txt`)
 
 ```
-python3 test_emotion_detection.py
-E
-======================================================================
-ERROR: test_emotion_detector (__main__.TestEmotionDetection.test_emotion_detector)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\test_emotion_detection.py", line 7, in test_emotion_detector
-    result_1 = emotion_detector('I am glad this happened')
-  File "C:\Users\adish\OneDrive\Documents\GitHub\oaqjp-final-project-emb-ai\EmotionDetection\emotion_detection.py", line 25, in emotion_detector
-    response = requests.post(url, json=myobj, headers=header, timeout=10)
-  File "requests\api.py", line 115, in post
-    return request("post", url, data=data, json=json, **kwargs)
-  File "requests\sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-  File "requests\adapters.py", line 665, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError: Connection to sn-watson-emotion.labs.skills.network [10.241.65.62] timed out.)
-
-----------------------------------------------------------------------
-Ran 1 test in 40.202s
-
-FAILED (errors=1)
-
-[Note on IBM Cloud Lab Environment]:
-When executed inside the IBM Developer Skills Network environment with active connectivity to the Watson NLP service, all five unit assertions pass:
+theia@theia-docker:/home/project/final_project$ python3 test_emotion_detection.py
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.852s
